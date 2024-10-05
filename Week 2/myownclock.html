@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20vh; /* Adjust to center vertically */
+        }
+        .clock {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock" id="clock"></div>
+
+    <script>
+        // JavaScript code goes here
+        function time() {
+            console.clear();
+
+            const time = new Date();
+            let hours = time.getHours();
+            const minutes = time.getMinutes();
+            const seconds = time.getSeconds();
+
+            const paddedHours = hours < 10 ? '0' + hours : hours;
+            const paddedMinutes = minutes < 10 ? '0' + minutes : minutes;
+            const paddedSeconds = seconds < 10 ? '0' + seconds : seconds;
+            const time24 = `${paddedHours}:${paddedMinutes}:${paddedSeconds}`;
+
+            const ampm = hours >= 12? 'PM' : 'AM';
+            if(hours >= 12) {
+                hours = hours - 12; 
+            } else if (hours === 0) {
+                hours = 12;
+            }
+            const paddedHours12 = hours < 10? '0' + hours : hours;
+            const time12 = `${paddedHours12}:${paddedMinutes}:${paddedSeconds} ${ampm}`;
+
+            // Displaying in the browser
+            const clockElement = document.getElementById('clock');
+            clockElement.innerHTML = `<div>24-hour format: ${time24}</div><div>12-hour format: ${time12}</div>`;
+        }
+
+        setInterval(time, 1000);
+        time(); // Initial call to display time immediately
+    </script>
+</body>
+</html>
