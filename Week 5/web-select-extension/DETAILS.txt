@@ -1,0 +1,8 @@
+--profile-directory=Default
+--enable-features=msEdgeAreaSelect
+
+
+found an extension that works similar (not exact) to web select but it should do the work
+https://tools.nsreem.com/web-select/
+
+You need to download it and extract. It contains two folders, one for macOS and other for windows. Go to edge/ chrome's manage extension and enable developer mode. Then click on load unpacked and select the folder you extracted as per your OS.
