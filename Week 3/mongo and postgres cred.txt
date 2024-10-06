@@ -1,0 +1,6 @@
+downloaded mongodb compass and connected mongodb acc
+mongodb+srv://admin:defnotadmin@cluster0.hvgbrlv.mongodb.net/
+
+signed up on neon.tech and created postgres acc
+postgresql://admin:iDcRytNX5GU4@ep-late-lab-a55rrcrz.us-east-2.aws.neon.tech/test?sslmode=require
+postgresql://test_owner:Gkrw0Mq8cxjR@ep-late-lab-a55rrcrz.us-east-2.aws.neon.tech/test?sslmode=require
